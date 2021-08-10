@@ -5,14 +5,14 @@ goog.require('cljs.core.constants');
 goog.require('quil.core');
 goog.require('pucks.agents.generic');
 pucks.agents.stone.draw_stone = (function pucks$agents$stone$draw_stone(p){
-var vec__11351 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11351,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11351,(1),null);
+var vec__13355 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13355,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13355,(1),null);
 var radius = cljs.core.cst$kw$radius.cljs$core$IFn$_invoke$arity$1(p);
-var vec__11354 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
-var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11354,(0),null);
-var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11354,(1),null);
-var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11354,(2),null);
+var vec__13358 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
+var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13358,(0),null);
+var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13358,(1),null);
+var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13358,(2),null);
 quil.core.push_matrix();
 
 quil.core.translate.cljs$core$IFn$_invoke$arity$2(x,y);

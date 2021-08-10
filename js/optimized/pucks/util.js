@@ -28,8 +28,8 @@ return r;
 pucks.util.rotational_difference = (function pucks$util$rotational_difference(rot1,rot2){
 var r1wrapped = pucks.util.wrap_rotation(rot1);
 var r2wrapped = pucks.util.wrap_rotation(rot2);
-var diff = (function (){var G__11289 = (r1wrapped - r2wrapped);
-return Math.abs(G__11289);
+var diff = (function (){var G__13083 = (r1wrapped - r2wrapped);
+return Math.abs(G__13083);
 })();
 var x__4222__auto__ = diff;
 var y__4223__auto__ = (pucks.globals.two_pi - diff);
@@ -47,20 +47,20 @@ return java.lang.System.currentTimeMillis();
  * the world, assuming it is torroidal, so that the returned coordinate will indeed
  * refer to a position in the world.
  */
-pucks.util.wrap_position = (function pucks$util$wrap_position(p__11290){
-var vec__11291 = p__11290;
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11291,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11291,(1),null);
+pucks.util.wrap_position = (function pucks$util$wrap_position(p__13084){
+var vec__13085 = p__13084;
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13085,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13085,(1),null);
 var screen_size = cljs.core.cst$kw$screen_DASH_size.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(pucks.globals.pucks_settings));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(((x < (0)))?(screen_size + x):(((x >= screen_size))?(x - screen_size):x)),(((y < (0)))?(screen_size + y):(((y >= screen_size))?(y - screen_size):y))], null);
 });
 /**
  * Returns a rotation corresponding to a provided [x y] relative position.
  */
-pucks.util.relative_position__GT_rotation = (function pucks$util$relative_position__GT_rotation(p__11294){
-var vec__11295 = p__11294;
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11295,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11295,(1),null);
+pucks.util.relative_position__GT_rotation = (function pucks$util$relative_position__GT_rotation(p__13088){
+var vec__13089 = p__13088;
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13089,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13089,(1),null);
 if((((x === (0))) && ((y === (0))))){
 return (cljs.core.rand.cljs$core$IFn$_invoke$arity$1(pucks.globals.two_pi) - pucks.globals.pi);
 } else {
@@ -70,10 +70,10 @@ return quil.core.atan2(x,(- y));
 /**
  * Returns a rotation corresponding to a provided [x y] relative position.
  */
-pucks.util.direction__GT_rotation = (function pucks$util$direction__GT_rotation(p__11298){
-var vec__11299 = p__11298;
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11299,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11299,(1),null);
+pucks.util.direction__GT_rotation = (function pucks$util$direction__GT_rotation(p__13092){
+var vec__13093 = p__13092;
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13093,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13093,(1),null);
 return pucks.util.relative_position__GT_rotation(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null));
 });
 /**
@@ -81,12 +81,12 @@ return pucks.util.relative_position__GT_rotation(new cljs.core.PersistentVector(
  * position in a toroidal world.
  */
 pucks.util.relativize_position = (function pucks$util$relativize_position(agent,position){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(agent,cljs.core.cst$kw$position,(function (){var vec__11302 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(agent);
-var ax = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11302,(0),null);
-var ay = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11302,(1),null);
-var vec__11305 = position;
-var px = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11305,(0),null);
-var py = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11305,(1),null);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(agent,cljs.core.cst$kw$position,(function (){var vec__13096 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(agent);
+var ax = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13096,(0),null);
+var ay = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13096,(1),null);
+var vec__13099 = position;
+var px = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13099,(0),null);
+var py = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13099,(1),null);
 var sz = cljs.core.cst$kw$screen_DASH_size.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(pucks.globals.pucks_settings));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(((quil.core.abs((ax - px)) < (function (){var x__4222__auto__ = (ax + (sz - px));
 var y__4223__auto__ = (px + (sz - ax));
@@ -107,8 +107,8 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(agent,cljs.core.cst$kw$posi
  * Returns an [x y] relative position in the direction of the given rotation.
  */
 pucks.util.rotation__GT_relative_position = (function pucks$util$rotation__GT_relative_position(theta){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [Math.sin(theta),(function (){var G__11308 = (theta - Math.PI);
-return Math.cos(G__11308);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [Math.sin(theta),(function (){var G__13102 = (theta - Math.PI);
+return Math.cos(G__13102);
 })()], null);
 });
 /**
@@ -147,12 +147,12 @@ return v;
  * size.
  */
 pucks.util.abbreviate_embedded_agents = (function pucks$util$abbreviate_embedded_agents(a){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(a,cljs.core.cst$kw$neighbors,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__11309_SHARP_){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$abbrev,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p1__11309_SHARP_)], null);
-}),cljs.core.cst$kw$neighbors.cljs$core$IFn$_invoke$arity$1(a))),cljs.core.cst$kw$sensed,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__11310_SHARP_){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$abbrev,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p1__11310_SHARP_)], null);
-}),cljs.core.cst$kw$sensed.cljs$core$IFn$_invoke$arity$1(a))),cljs.core.cst$kw$overlaps,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__11311_SHARP_){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$abbrev,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p1__11311_SHARP_)], null);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(a,cljs.core.cst$kw$neighbors,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__13103_SHARP_){
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$abbrev,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p1__13103_SHARP_)], null);
+}),cljs.core.cst$kw$neighbors.cljs$core$IFn$_invoke$arity$1(a))),cljs.core.cst$kw$sensed,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__13104_SHARP_){
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$abbrev,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p1__13104_SHARP_)], null);
+}),cljs.core.cst$kw$sensed.cljs$core$IFn$_invoke$arity$1(a))),cljs.core.cst$kw$overlaps,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__13105_SHARP_){
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$abbrev,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p1__13105_SHARP_)], null);
 }),cljs.core.cst$kw$overlaps.cljs$core$IFn$_invoke$arity$1(a))),cljs.core.cst$kw$proposals,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$proposals.cljs$core$IFn$_invoke$arity$1(a),cljs.core.cst$kw$spawn,cljs.core.cst$kw$abbrev));
 });
 pucks.util.print_stats = (function pucks$util$print_stats(){
@@ -175,11 +175,11 @@ return cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(f,coll);
  * Returns sequence s without the first instance of item.
  */
 pucks.util.remove_one = (function pucks$util$remove_one(item,s){
-var vec__11315 = cljs.core.split_with((function (p1__11314_SHARP_){
-return (!(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(item,p1__11314_SHARP_)));
+var vec__13109 = cljs.core.split_with((function (p1__13108_SHARP_){
+return (!(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(item,p1__13108_SHARP_)));
 }),s);
-var without_item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11315,(0),null);
-var with_item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11315,(1),null);
+var without_item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13109,(0),null);
+var with_item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13109,(1),null);
 return cljs.core.concat.cljs$core$IFn$_invoke$arity$2(without_item,cljs.core.rest(with_item));
 });
 /**

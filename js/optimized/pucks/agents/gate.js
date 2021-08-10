@@ -8,14 +8,14 @@ goog.require('pucks.vec2D');
 goog.require('quil.core');
 goog.require('pucks.agents.generic');
 pucks.agents.gate.draw_gate = (function pucks$agents$gate$draw_gate(p){
-var vec__11600 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11600,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11600,(1),null);
+var vec__13563 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13563,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13563,(1),null);
 var radius = cljs.core.cst$kw$radius.cljs$core$IFn$_invoke$arity$1(p);
-var vec__11603 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
-var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11603,(0),null);
-var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11603,(1),null);
-var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11603,(2),null);
+var vec__13566 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
+var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13566,(0),null);
+var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13566,(1),null);
+var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13566,(2),null);
 var half_radius = (radius / (2));
 quil.core.push_matrix();
 
@@ -64,25 +64,25 @@ quil.core.ellipse((0),(0),(radius * (2)),(radius * (2)));
 return quil.core.pop_matrix();
 });
 pucks.agents.gate.gate_proposals = (function pucks$agents$gate$gate_proposals(p){
-return new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$transfer,cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,(function (){var iter__4523__auto__ = (function pucks$agents$gate$gate_proposals_$_iter__11606(s__11607){
+return new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$transfer,cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,(function (){var iter__4523__auto__ = (function pucks$agents$gate$gate_proposals_$_iter__13569(s__13570){
 return (new cljs.core.LazySeq(null,(function (){
-var s__11607__$1 = s__11607;
+var s__13570__$1 = s__13570;
 while(true){
-var temp__5735__auto__ = cljs.core.seq(s__11607__$1);
+var temp__5735__auto__ = cljs.core.seq(s__13570__$1);
 if(temp__5735__auto__){
-var s__11607__$2 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__11607__$2)){
-var c__4521__auto__ = cljs.core.chunk_first(s__11607__$2);
+var s__13570__$2 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__13570__$2)){
+var c__4521__auto__ = cljs.core.chunk_first(s__13570__$2);
 var size__4522__auto__ = cljs.core.count(c__4521__auto__);
-var b__11609 = cljs.core.chunk_buffer(size__4522__auto__);
-if((function (){var i__11608 = (0);
+var b__13572 = cljs.core.chunk_buffer(size__4522__auto__);
+if((function (){var i__13571 = (0);
 while(true){
-if((i__11608 < size__4522__auto__)){
-var other = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4521__auto__,i__11608);
-cljs.core.chunk_append(b__11609,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$self,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p),cljs.core.cst$kw$other,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(other),cljs.core.cst$kw$bid,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$promise,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$open,(100)], null)], null),cljs.core.cst$kw$ask,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$inventory,cljs.core.cst$kw$key], null)], null));
+if((i__13571 < size__4522__auto__)){
+var other = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4521__auto__,i__13571);
+cljs.core.chunk_append(b__13572,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$self,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p),cljs.core.cst$kw$other,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(other),cljs.core.cst$kw$bid,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$promise,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$open,(100)], null)], null),cljs.core.cst$kw$ask,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$inventory,cljs.core.cst$kw$key], null)], null));
 
-var G__11610 = (i__11608 + (1));
-i__11608 = G__11610;
+var G__13573 = (i__13571 + (1));
+i__13571 = G__13573;
 continue;
 } else {
 return true;
@@ -90,13 +90,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__11609),pucks$agents$gate$gate_proposals_$_iter__11606(cljs.core.chunk_rest(s__11607__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__13572),pucks$agents$gate$gate_proposals_$_iter__13569(cljs.core.chunk_rest(s__13570__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__11609),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__13572),null);
 }
 } else {
-var other = cljs.core.first(s__11607__$2);
-return cljs.core.cons(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$self,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p),cljs.core.cst$kw$other,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(other),cljs.core.cst$kw$bid,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$promise,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$open,(100)], null)], null),cljs.core.cst$kw$ask,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$inventory,cljs.core.cst$kw$key], null)], null),pucks$agents$gate$gate_proposals_$_iter__11606(cljs.core.rest(s__11607__$2)));
+var other = cljs.core.first(s__13570__$2);
+return cljs.core.cons(new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$self,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(p),cljs.core.cst$kw$other,cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(other),cljs.core.cst$kw$bid,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$promise,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$open,(100)], null)], null),cljs.core.cst$kw$ask,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$inventory,cljs.core.cst$kw$key], null)], null),pucks$agents$gate$gate_proposals_$_iter__13569(cljs.core.rest(s__13570__$2)));
 }
 } else {
 return null;

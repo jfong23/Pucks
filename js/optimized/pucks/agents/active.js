@@ -6,22 +6,22 @@ goog.require('quil.core');
 goog.require('pucks.globals');
 goog.require('pucks.agents.generic');
 pucks.agents.active.draw_active = (function pucks$agents$active$draw_active(p){
-var vec__11330 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11330,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11330,(1),null);
+var vec__13116 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13116,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13116,(1),null);
 var radius = cljs.core.cst$kw$radius.cljs$core$IFn$_invoke$arity$1(p);
-var vec__11333 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
-var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11333,(0),null);
-var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11333,(1),null);
-var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11333,(2),null);
-var vec__11336 = cljs.core.cst$kw$eye_DASH_color.cljs$core$IFn$_invoke$arity$1(p);
-var eye_r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11336,(0),null);
-var eye_g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11336,(1),null);
-var eye_b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11336,(2),null);
-var vec__11339 = cljs.core.cst$kw$core_DASH_color.cljs$core$IFn$_invoke$arity$1(p);
-var core_r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11339,(0),null);
-var core_g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11339,(1),null);
-var core_b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__11339,(2),null);
+var vec__13119 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
+var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13119,(0),null);
+var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13119,(1),null);
+var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13119,(2),null);
+var vec__13122 = cljs.core.cst$kw$eye_DASH_color.cljs$core$IFn$_invoke$arity$1(p);
+var eye_r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13122,(0),null);
+var eye_g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13122,(1),null);
+var eye_b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13122,(2),null);
+var vec__13125 = cljs.core.cst$kw$core_DASH_color.cljs$core$IFn$_invoke$arity$1(p);
+var core_r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13125,(0),null);
+var core_g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13125,(1),null);
+var core_b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13125,(2),null);
 var core_diameter = (radius * cljs.core.cst$kw$energy.cljs$core$IFn$_invoke$arity$1(p));
 quil.core.push_matrix();
 
@@ -50,8 +50,8 @@ quil.core.ellipse((0),(0),(radius * 0.2),(radius * 0.2));
 
 quil.core.fill.cljs$core$IFn$_invoke$arity$4((255),(255),(255),(20));
 
-var s_11342 = (cljs.core.cst$kw$sensor_DASH_range.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(pucks.globals.pucks_settings)) * (2));
-quil.core.arc.cljs$core$IFn$_invoke$arity$6((0),(0),s_11342,s_11342,pucks.globals.pi,pucks.globals.two_pi);
+var s_13128 = (cljs.core.cst$kw$sensor_DASH_range.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(pucks.globals.pucks_settings)) * (2));
+quil.core.arc.cljs$core$IFn$_invoke$arity$6((0),(0),s_13128,s_13128,pucks.globals.pi,pucks.globals.two_pi);
 
 if(cljs.core.truth_(cljs.core.cst$kw$just_DASH_collided.cljs$core$IFn$_invoke$arity$1(p))){
 quil.core.fill.cljs$core$IFn$_invoke$arity$4((0),(0),(0),(0));
