@@ -26,24 +26,24 @@ return cljs.core.println();
 /**
  * Main GP loop.
  */
-propeller.gp.gp = (function propeller$gp$gp(p__16128){
-var map__16129 = p__16128;
-var map__16129__$1 = (((((!((map__16129 == null))))?(((((map__16129.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__16129.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__16129):map__16129);
-var argmap = map__16129__$1;
-var population_size = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16129__$1,cljs.core.cst$kw$population_DASH_size);
-var max_generations = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16129__$1,cljs.core.cst$kw$max_DASH_generations);
-var error_function = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16129__$1,cljs.core.cst$kw$error_DASH_function);
-var instructions = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16129__$1,cljs.core.cst$kw$instructions);
-var max_initial_plushy_size = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16129__$1,cljs.core.cst$kw$max_DASH_initial_DASH_plushy_DASH_size);
+propeller.gp.gp = (function propeller$gp$gp(p__16599){
+var map__16600 = p__16599;
+var map__16600__$1 = (((((!((map__16600 == null))))?(((((map__16600.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__16600.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__16600):map__16600);
+var argmap = map__16600__$1;
+var population_size = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16600__$1,cljs.core.cst$kw$population_DASH_size);
+var max_generations = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16600__$1,cljs.core.cst$kw$max_DASH_generations);
+var error_function = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16600__$1,cljs.core.cst$kw$error_DASH_function);
+var instructions = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16600__$1,cljs.core.cst$kw$instructions);
+var max_initial_plushy_size = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__16600__$1,cljs.core.cst$kw$max_DASH_initial_DASH_plushy_DASH_size);
 cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$starting_DASH_args,cljs.core.update.cljs$core$IFn$_invoke$arity$3(cljs.core.update.cljs$core$IFn$_invoke$arity$3(argmap,cljs.core.cst$kw$error_DASH_function,cljs.core.str),cljs.core.cst$kw$instructions,cljs.core.str)], null)], 0));
 
 cljs.core.println();
 
 var generation = (0);
-var population = cljs.core.repeatedly.cljs$core$IFn$_invoke$arity$2(population_size,((function (generation,map__16129,map__16129__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size){
+var population = cljs.core.repeatedly.cljs$core$IFn$_invoke$arity$2(population_size,((function (generation,map__16600,map__16600__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size){
 return (function (){
 return cljs.core.PersistentHashMap.fromArrays([cljs.core.cst$kw$plushy],[propeller.genome.make_random_plushy(instructions,max_initial_plushy_size)]);
-});})(generation,map__16129,map__16129__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size))
+});})(generation,map__16600,map__16600__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size))
 );
 while(true){
 var evaluated_pop = cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$total_DASH_error,cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.partial.cljs$core$IFn$_invoke$arity$3(error_function,argmap,cljs.core.cst$kw$training_DASH_data.cljs$core$IFn$_invoke$arity$1(argmap)),population));
@@ -53,10 +53,10 @@ propeller.gp.report(evaluated_pop,generation,argmap);
 if((cljs.core.cst$kw$total_DASH_error.cljs$core$IFn$_invoke$arity$1(best_individual) === (0))){
 cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$success_DASH_generation,generation], null)], 0));
 
-cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$total_DASH_test_DASH_error,cljs.core.cst$kw$total_DASH_error.cljs$core$IFn$_invoke$arity$1((function (){var G__16134 = argmap;
-var G__16135 = cljs.core.cst$kw$testing_DASH_data.cljs$core$IFn$_invoke$arity$1(argmap);
-var G__16136 = best_individual;
-return (error_function.cljs$core$IFn$_invoke$arity$3 ? error_function.cljs$core$IFn$_invoke$arity$3(G__16134,G__16135,G__16136) : error_function.call(null,G__16134,G__16135,G__16136));
+cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$total_DASH_test_DASH_error,cljs.core.cst$kw$total_DASH_error.cljs$core$IFn$_invoke$arity$1((function (){var G__16605 = argmap;
+var G__16606 = cljs.core.cst$kw$testing_DASH_data.cljs$core$IFn$_invoke$arity$1(argmap);
+var G__16607 = best_individual;
+return (error_function.cljs$core$IFn$_invoke$arity$3 ? error_function.cljs$core$IFn$_invoke$arity$3(G__16605,G__16606,G__16607) : error_function.call(null,G__16605,G__16606,G__16607));
 })())], null)], 0));
 
 return cljs.core.List.EMPTY;
@@ -64,18 +64,18 @@ return cljs.core.List.EMPTY;
 if((generation >= max_generations)){
 return null;
 } else {
-var G__16137 = (generation + (1));
-var G__16138 = (cljs.core.truth_(cljs.core.cst$kw$elitism.cljs$core$IFn$_invoke$arity$1(argmap))?cljs.core.conj.cljs$core$IFn$_invoke$arity$2(cljs.core.repeatedly.cljs$core$IFn$_invoke$arity$2((population_size - (1)),((function (generation,population,evaluated_pop,best_individual,map__16129,map__16129__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size){
+var G__16608 = (generation + (1));
+var G__16609 = (cljs.core.truth_(cljs.core.cst$kw$elitism.cljs$core$IFn$_invoke$arity$1(argmap))?cljs.core.conj.cljs$core$IFn$_invoke$arity$2(cljs.core.repeatedly.cljs$core$IFn$_invoke$arity$2((population_size - (1)),((function (generation,population,evaluated_pop,best_individual,map__16600,map__16600__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size){
 return (function (){
 return propeller.variation.new_individual(evaluated_pop,argmap);
-});})(generation,population,evaluated_pop,best_individual,map__16129,map__16129__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size))
-),cljs.core.first(evaluated_pop)):cljs.core.repeatedly.cljs$core$IFn$_invoke$arity$2(population_size,((function (generation,population,evaluated_pop,best_individual,map__16129,map__16129__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size){
+});})(generation,population,evaluated_pop,best_individual,map__16600,map__16600__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size))
+),cljs.core.first(evaluated_pop)):cljs.core.repeatedly.cljs$core$IFn$_invoke$arity$2(population_size,((function (generation,population,evaluated_pop,best_individual,map__16600,map__16600__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size){
 return (function (){
 return propeller.variation.new_individual(evaluated_pop,argmap);
-});})(generation,population,evaluated_pop,best_individual,map__16129,map__16129__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size))
+});})(generation,population,evaluated_pop,best_individual,map__16600,map__16600__$1,argmap,population_size,max_generations,error_function,instructions,max_initial_plushy_size))
 ));
-generation = G__16137;
-population = G__16138;
+generation = G__16608;
+population = G__16609;
 continue;
 
 }

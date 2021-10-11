@@ -35,8 +35,8 @@ propeller.push.state.pop_stack = (function propeller$push$state$pop_stack(state,
 return cljs.core.update.cljs$core$IFn$_invoke$arity$3(state,stack,cljs.core.rest);
 });
 propeller.push.state.pop_stack_many = (function propeller$push$state$pop_stack_many(state,stack,n){
-return cljs.core.update.cljs$core$IFn$_invoke$arity$3(state,stack,(function (p1__13241_SHARP_){
-return cljs.core.drop.cljs$core$IFn$_invoke$arity$2(n,p1__13241_SHARP_);
+return cljs.core.update.cljs$core$IFn$_invoke$arity$3(state,stack,(function (p1__13391_SHARP_){
+return cljs.core.drop.cljs$core$IFn$_invoke$arity$2(n,p1__13391_SHARP_);
 }));
 });
 propeller.push.state.push_to_stack = (function propeller$push$state$push_to_stack(state,stack,item){
@@ -49,8 +49,8 @@ return cljs.core.update.cljs$core$IFn$_invoke$arity$4(state,stack,cljs.core.conj
 propeller.push.state.push_to_stack_many = (function propeller$push$state$push_to_stack_many(state,stack,items){
 var items__$1 = ((cljs.core.coll_QMARK_(items))?items:(new cljs.core.List(null,items,null,(1),null)));
 var items_no_nil = cljs.core.filter.cljs$core$IFn$_invoke$arity$2(((function (items__$1){
-return (function (p1__13242_SHARP_){
-return (!((p1__13242_SHARP_ == null)));
+return (function (p1__13392_SHARP_){
+return (!((p1__13392_SHARP_ == null)));
 });})(items__$1))
 ,items__$1);
 return cljs.core.update.cljs$core$IFn$_invoke$arity$4(state,stack,cljs.core.into,cljs.core.reverse(items_no_nil));

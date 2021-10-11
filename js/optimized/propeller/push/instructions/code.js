@@ -6,8 +6,8 @@ goog.require('propeller.utils');
 goog.require('propeller.push.state');
 goog.require('propeller.push.utils.helpers');
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(propeller.push.core.instruction_table,cljs.core.assoc,cljs.core.cst$kw$code_append,cljs.core.with_meta((function (state){
-return propeller.push.utils.helpers.make_instruction(state,(function (p1__14067_SHARP_,p2__14066_SHARP_){
-return propeller.utils.not_lazy(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(propeller.utils.ensure_list(p2__14066_SHARP_),propeller.utils.ensure_list(p1__14067_SHARP_)));
+return propeller.push.utils.helpers.make_instruction(state,(function (p1__14538_SHARP_,p2__14537_SHARP_){
+return propeller.utils.not_lazy(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(propeller.utils.ensure_list(p2__14537_SHARP_),propeller.utils.ensure_list(p1__14538_SHARP_)));
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$code,cljs.core.cst$kw$code], null),cljs.core.cst$kw$code);
 }),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$stacks,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$code,null], null), null)], null)));
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(propeller.push.core.instruction_table,cljs.core.assoc,cljs.core.cst$kw$exec_do_range,cljs.core.with_meta((function (state){
@@ -46,18 +46,18 @@ return propeller.push.state.push_to_stack(popped_state,cljs.core.cst$kw$exec,(ne
 }
 }),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$stacks,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$exec,null,cljs.core.cst$kw$integer,null], null), null)], null)));
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(propeller.push.core.instruction_table,cljs.core.assoc,cljs.core.cst$kw$exec_if,cljs.core.with_meta((function (state){
-return propeller.push.utils.helpers.make_instruction(state,(function (p1__14068_SHARP_,p2__14070_SHARP_,p3__14069_SHARP_){
-if(cljs.core.truth_(p1__14068_SHARP_)){
-return p3__14069_SHARP_;
+return propeller.push.utils.helpers.make_instruction(state,(function (p1__14539_SHARP_,p2__14541_SHARP_,p3__14540_SHARP_){
+if(cljs.core.truth_(p1__14539_SHARP_)){
+return p3__14540_SHARP_;
 } else {
-return p2__14070_SHARP_;
+return p2__14541_SHARP_;
 }
 }),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$boolean,cljs.core.cst$kw$exec,cljs.core.cst$kw$exec], null),cljs.core.cst$kw$exec);
 }),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$stacks,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$exec,null,cljs.core.cst$kw$boolean,null], null), null)], null)));
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(propeller.push.core.instruction_table,cljs.core.assoc,cljs.core.cst$kw$exec_when,cljs.core.with_meta((function (state){
-return propeller.push.utils.helpers.make_instruction(state,(function (p1__14071_SHARP_,p2__14072_SHARP_){
-if(cljs.core.truth_(p1__14071_SHARP_)){
-return p2__14072_SHARP_;
+return propeller.push.utils.helpers.make_instruction(state,(function (p1__14542_SHARP_,p2__14543_SHARP_){
+if(cljs.core.truth_(p1__14542_SHARP_)){
+return p2__14543_SHARP_;
 } else {
 return null;
 }
@@ -97,10 +97,10 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(propeller.push.core.instructi
 if((cljs.core.count(cljs.core.cst$kw$exec.cljs$core$IFn$_invoke$arity$1(state)) < (3))){
 return state;
 } else {
-var vec__14073 = propeller.push.state.peek_stack_many(state,cljs.core.cst$kw$exec,(3));
-var a = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14073,(0),null);
-var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14073,(1),null);
-var c = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14073,(2),null);
+var vec__14544 = propeller.push.state.peek_stack_many(state,cljs.core.cst$kw$exec,(3));
+var a = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14544,(0),null);
+var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14544,(1),null);
+var c = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__14544,(2),null);
 var popped_state = propeller.push.state.pop_stack_many(state,cljs.core.cst$kw$exec,(3));
 var to_push_back = (new cljs.core.List(null,a,(new cljs.core.List(null,c,(new cljs.core.List(null,(new cljs.core.List(null,b,(new cljs.core.List(null,c,null,(1),null)),(2),null)),null,(1),null)),(2),null)),(3),null));
 return propeller.push.state.push_to_stack_many(popped_state,cljs.core.cst$kw$exec,to_push_back);

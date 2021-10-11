@@ -7,14 +7,14 @@ goog.require('pucks.globals');
 goog.require('quil.core');
 goog.require('pucks.agents.generic');
 pucks.agents.beacon.draw_beacon = (function pucks$agents$beacon$draw_beacon(p){
-var vec__13471 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13471,(0),null);
-var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13471,(1),null);
+var vec__13175 = cljs.core.cst$kw$position.cljs$core$IFn$_invoke$arity$1(p);
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13175,(0),null);
+var y = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13175,(1),null);
 var radius = cljs.core.cst$kw$radius.cljs$core$IFn$_invoke$arity$1(p);
-var vec__13474 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
-var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13474,(0),null);
-var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13474,(1),null);
-var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13474,(2),null);
+var vec__13178 = cljs.core.cst$kw$color.cljs$core$IFn$_invoke$arity$1(p);
+var r = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13178,(0),null);
+var g = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13178,(1),null);
+var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__13178,(2),null);
 quil.core.push_matrix();
 
 quil.core.translate.cljs$core$IFn$_invoke$arity$2(x,y);

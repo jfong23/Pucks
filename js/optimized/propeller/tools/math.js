@@ -59,8 +59,8 @@ return Math.floor(x);
  *   argument, returns the natural logarithm (base e) of the given value.
  */
 propeller.tools.math.log = (function propeller$tools$math$log(var_args){
-var G__14079 = arguments.length;
-switch (G__14079) {
+var G__14550 = arguments.length;
+switch (G__14550) {
 case 2:
 return propeller.tools.math.log.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
